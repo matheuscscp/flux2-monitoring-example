@@ -6,11 +6,10 @@ spec:
   interval: 1h
   chart:
     spec:
-      chart: charts/kube-prometheus-stack
+      chart: kube-prometheus-stack
       sourceRef:
-        kind: GitRepository
-        name: flux-system
-        namespace: flux-system
+        kind: HelmRepository
+        name: kube-prometheus-stack
   install:
     crds: Create
   upgrade:
